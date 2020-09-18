@@ -2,8 +2,8 @@
 #include <cmath>
 using namespace std;
 
-int fact(int n) {
-    int f = 1;
+long long  fact(int n) {
+    long long f = 1;
     for (int i = 1; i <= n; ++i) {
         f *= i;
     }
@@ -46,7 +46,7 @@ int main()
     cin >> x1;
     int n;
     y = sin(x1);
-    double h;
+    long double h;
     double u = 1.0;
     for (int i = -2; i >= -6; --i) {
         n = 0;
