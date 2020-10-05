@@ -16,7 +16,7 @@ int main()
     cout << "ASCII:" << endl;
     char a = 0;
     for (int i = 0; i <= 255; ++i) {
-        cout << a << endl;
+        cout << i << " - " << a << endl;
         a++;
     }
     //cout << fact(5) << endl;
