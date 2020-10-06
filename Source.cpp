@@ -47,14 +47,19 @@ int main()
     int n;
     y = sin(x1);
     long double h;
+    long double j;
     double u = 1.0;
     for (int i = -2; i >= -6; --i) {
-        n = 0;
+        n = 1;
         h = 1.0 * x1;
+        j = -1.0 * pow(x1, 3) / fact(3);
+        //cout <<"IT: "<< y << " " << h << " " << j << endl;
         while (abs(h - y) >= 0.001 * u) {
             n++;
-            h += pow(-1, n) * pow(x1, 2 * n + 1) / fact(2 * n + 1);
+            h += j;
+            j = -1.0 * j * pow(x1, 2) / ((2.0 * n + 1.0) * 2.0 * n);
             cout << y << " " << h << endl;
+            if (n > 9) break;
         }
         u *= 0.1;
         cout << "dlya 10^" << i << " nado iteraciy " << n << endl;
